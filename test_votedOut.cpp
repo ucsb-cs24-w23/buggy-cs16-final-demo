@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
             Parchment *v2 = new Parchment{"Jaclyn", "Baylor", v3};
             Parchment *v1 = new Parchment{"Keith", "Jaclyn", v2};
             Parchment *sanJuanDelSurUrn = v1;
-
+            
             assertEquals( "Jaclyn", votedOut(sanJuanDelSurUrn), "Test 1");
         }
         else if (testNum == 2)

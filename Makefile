@@ -1,6 +1,6 @@
 CXX = g++
 
-CXXFLAGS = -Wall -Wno-uninitialized -std=c++11
+CXXFLAGS = -Wall -Wno-uninitialized -std=c++11 -g -O0
 
 BINARIES= test_tallyTheVote test_countVotes test_votedOut
 
@@ -10,8 +10,15 @@ all: ${BINARIES}
 
 tests: ${BINARIES}
 	./test_countVotes 1
-	./test_tallyTheVote 1
+	./test_countVotes 2
+	./test_countVotes 3
+	./test_countVotes 4
 	./test_votedOut 1
+	./test_votedOut 2
+	./test_votedOut 3
+	./test_tallyTheVote 1
+	./test_tallyTheVote 2
+	./test_tallyTheVote 3
 	
 
 test_countVotes: test_countVotes.o ${COMMON_OBJECT_FILES}
